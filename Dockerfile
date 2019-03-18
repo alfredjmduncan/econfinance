@@ -18,7 +18,4 @@ RUN apt-get update && \
 RUN julia -e "using Pkg; pkg\"add DataFrames TikzPictures LightGraphs MetaGraphs GraphPlot TikzGraphs LinearAlgebra Latexify JuMP Ipopt\"; pkg\"precompile\""
    
 # move kernelspec out of home \ 
-RUN mv $HOME/.local/share/jupyter/kernels/julia* $CONDA_DIR/share/jupyter/kernels/ && \
-    chmod -R go+rx $CONDA_DIR/share/jupyter && \
-    rm -rf $HOME/.local && \
-    fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
+RUN fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
