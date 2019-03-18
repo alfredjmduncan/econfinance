@@ -11,6 +11,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     texlive-latex-base \
     texlive-binaries \
+    texlive-collection-luatex \
     pdf2svg && \
     rm -rf /var/lib/apt/lists/*
 
