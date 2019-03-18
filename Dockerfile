@@ -21,5 +21,5 @@ RUN julia -e "using Pkg; pkg\"add DataFrames TikzPictures LightGraphs MetaGraphs
 # move kernelspec out of home \ 
 RUN fix-permissions $JULIA_PKGDIR $CONDA_DIR/share/jupyter
 
-# Download example notebooks 
-RUN git clone https://github.com/alfredjmduncan/econfinance/tree/master/notebooks notebooks
+# Download example notebooks (downloads repository)
+RUN git clone https://github.com/alfredjmduncan/econfinance.git
